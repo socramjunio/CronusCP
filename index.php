@@ -42,6 +42,10 @@
 	$cc->template_dir = THEMES_DIR .'/'.$app['tema'];
 	$cc->compile_dir = THEMES_DIR_C .'/'.$app['tema'];;
 	$cc->config_dir = SMARTY_TEMPLATE_DIR ."/configs";
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 5d1d83c36727ed3cf696ab77516eb22ffca5ca62
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
