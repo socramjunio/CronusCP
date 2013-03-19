@@ -23,6 +23,7 @@
 	require_once( FUNCTIONS_URL.'/Mysql.php' );
 	require_once( FUNCTIONS_URL.'/Recaptchalib.php');
 	require_once( FUNCTIONS_URL.'/Stuff.php' );
+	require_once( SMARTY_TEMPLATE_DIR.'/Smarty.class.php' );
 	  
 	// Core.php
 	$core = new core( $config );
@@ -34,8 +35,13 @@
 	// Variáveis do Sistema
 	$key = "6LccYdoSAAAAANC-9VnOVIXO7F1XSo9CCYtqcR6s";
 	$app = $core->appConfig();
-	$menu = $core->menuConfig();
+	$modulos = $core->modulosConfig();
 	$class = $core->classData();
+	
+	$cc = new Smarty();
+	$cc->template_dir = THEMES_DIR .'/'.$app['tema'];
+	$cc->compile_dir = THEMES_DIR_C .'/'.$app['tema'];;
+	$cc->config_dir = SMARTY_TEMPLATE_DIR ."/configs";
 	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

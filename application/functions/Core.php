@@ -54,6 +54,18 @@
 		}
 		
 		/**
+		  * @nome: mysqlConfig
+		  * @parametros: ()
+		  * @retorno: (array)
+		  * @descrição: retorna um array de configuração dos modulos
+		  * @autor: Socramjunio
+		  */
+		public	function	modulosConfig()
+		{
+			return $this->conf[ 'modulos' ];
+		}
+		
+		/**
 		  * @nome: accountConfig
 		  * @parametros: ()
 		  * @retorno: (array)

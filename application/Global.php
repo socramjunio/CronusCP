@@ -6,10 +6,9 @@
 	  * @descrição: configurações gerais
 	  */
 	return array(
-		// Título
-		'title' => 'CronusCP',
-		// Mostrar quantidade de usuários online ?
-		'user_online_count' => true
+		'title' => 'CronusCP', // Título
+		'user_online_count' => true, // Mostrar quantidade de usuários online ?
+		'tema' => 'padrao' // Tema padrão
 	);
 
 ?>
