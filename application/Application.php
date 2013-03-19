@@ -8,17 +8,21 @@
 	  */
 	  
 	/// Definições
-	// Pasta de Estilos (css, imagem)
-	DEFINE( 'STYLES_URL', 'style' );
-	// Pasta de scripts (javascript)
-	DEFINE( 'SCRIPTS_URL', 'js' );
+	// Pasta root do sistema
+	DEFINE( 'ROOT', $_SERVER["DOCUMENT_ROOT"] );
 	// Pasta de funções
-	DEFINE( 'FUNCTIONS_URL', 'application/functions' );
+	DEFINE( 'FUNCTIONS_URL', ROOT .'/application/functions' );
+	// Pasta do smarty
+	DEFINE( 'SMARTY_TEMPLATE_DIR', FUNCTIONS_URL .'/smarty' );
+	// Pasta do smarty
+	DEFINE( 'THEMES_DIR', ROOT .'/temas' );
+	// Pasta do smarty
+	DEFINE( 'THEMES_DIR_C', ROOT .'/temas_c' );
 	
 	// Configurações
 	$config = array(
 		'app' => require_once( 'application/Global.php' ),
-		'menu' => require_once( 'application/Menu.php' ),
+		'modulos' => require_once( 'application/Modulos.php' ),
 		'mysql' => require_once( 'application/MySql.php' ),
 		'account' => require_once( 'application/Account.php' ),
 		'class' => require_once( 'application/Classes.php' )
