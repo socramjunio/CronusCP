@@ -9,18 +9,18 @@
 		#	@crcp->modulos->config['arquivos'['return arquivos do módulo e suas versões']];
 	  */
 	return array(
-		// Página Principal
-		'Principal' => array(
+		// Módulo contendo arquivos da página inicial
+		'home' => array(
 			'root' => ROOT .'/modulos/home',
 			'status' => true
 		),
 		// Informações
-		'Informações' => array(
+		'informacoes' => array(
 			'root' => ROOT .'/modulos/informacoes',
 			'status' => true
 		),
 		// Ranking
-		'Ranking' => array(
+		'ranking' => array(
 			'root' => ROOT .'/modulos/rankings',
 			'status' => true
 		),

@@ -9,7 +9,9 @@
 	  
 	/// Definições
 	// Pasta root do sistema
-	DEFINE( 'ROOT', $_SERVER["DOCUMENT_ROOT"] );
+	DEFINE( 'ROOT', str_replace("\\","/",getcwd()) );
+	// Endereço HTTP onde está instalado o sistema
+	DEFINE( 'HTTP', "http://".$_SERVER['SERVER_NAME'] );
 	// Pasta de funções
 	DEFINE( 'FUNCTIONS_URL', ROOT .'/application/functions' );
 	// Pasta do smarty

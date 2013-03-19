@@ -24,6 +24,7 @@
 	require_once( FUNCTIONS_URL.'/Recaptchalib.php');
 	require_once( FUNCTIONS_URL.'/Stuff.php' );
 	require_once( SMARTY_TEMPLATE_DIR.'/Smarty.class.php' );
+	require_once( SMARTY_TEMPLATE_DIR.'/Smarty.class.call.php' );
 	  
 	// Core.php
 	$core = new core( $config );
@@ -38,14 +39,10 @@
 	$modulos = $core->modulosConfig();
 	$class = $core->classData();
 	
-	$cc = new Smarty();
-	$cc->template_dir = THEMES_DIR .'/'.$app['tema'];
-	$cc->compile_dir = THEMES_DIR_C .'/'.$app['tema'];;
-	$cc->config_dir = SMARTY_TEMPLATE_DIR ."/configs";
-<<<<<<< HEAD
-=======
+	// Carregando variáveis do sistema de temas
+	$cc = new temas();
 	
->>>>>>> 5d1d83c36727ed3cf696ab77516eb22ffca5ca62
+	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -156,21 +153,7 @@ sua senha</b>, <b>resetar sua posição</b> e muito mais!
 	  ?>
       <div id="contentText">
       	<?php
-			if( !isset( $_GET[ 'page' ] ) )
-			{
-				require_once( 'home.php' );
-			}
-			else
-			{
-				if( file_exists( $_GET[ 'page' ].'.php' ) && !strstr( $_GET[ 'page' ], '/' ) )
-				{
-					require_once( $_GET[ 'page' ].'.php' );
-				}
-				else
-				{
-					require_once( 'error.php' );
-				}
-			}
+			$stuff->processarPaginas($_GET['pagina']);
 		?>
       </div>
     </div>

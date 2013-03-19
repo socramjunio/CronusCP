@@ -7,7 +7,7 @@
 	  */
 	
 	// Checagem (caso o index.php não carregue as funções corretamente)
-	require_once( 'application/functions/Mysql.php' );
+	require_once( ROOT .'/application/functions/Mysql.php' );
 	
 	class	stuff	extends	mysql
 	{
@@ -61,6 +61,7 @@
 		{
 			return ( isset( $_SESSION[ 'isLoggedIn' ] ) ? $_SESSION[ 'isLoggedIn' ]:0 );
 		}
+		
 	}
 
 ?>
