@@ -26,3 +26,6 @@ Equipe de Desenvolvimento
 - Otonii
 - Raizen
 - Yum
+
+### Reformulação
+- Socramjunio
