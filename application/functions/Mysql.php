@@ -34,7 +34,6 @@
 		  */
 		public	function	dbConn( )
 		{
-
 			$sql = $this->db;
 			$this->conn = mysql_connect( $sql[ 'mysql_host' ], $sql[ 'mysql_user' ], $sql[ 'mysql_pass' ] ) or die( mysql_error() ); 
 			$this->conn = mysql_select_db( $sql[ 'mysql_database' ], $this->conn  ) or die( mysql_error() );
