@@ -7,7 +7,7 @@
 	  */
 	return array(
 		// Página Principal
-		'Home' => LOWGM
+		'Home' => NENHUM
 	);
 
 ?>
